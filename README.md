@@ -1,196 +1,98 @@
-\# Лабораторная работа №6
+# Лабораторная работа №6
 
+**ФИО:** Егорова Анна Антоновна
 
+**Группа:** 220042-11
 
-\*\*ФИО:\*\* Егорова Анна Антоновна
+**Вариант:** 5
 
+**Дисциплина:** Методы и технологии программирования
 
-
-\*\*Группа:\*\* 220042-11
-
-
-
-\*\*Вариант:\*\* 5
-
-
-
-\*\*Дисциплина:\*\* Методы и технологии программирования
-
-
-
-\## Тема
-
-
+## Тема
 
 Веб-программирование на Python. Flask, FastAPI, REST API, WebSocket и Pydantic.
 
+## Выполненные задания
 
+### Задания средней сложности
 
-\## Выполненные задания
+- №1 — Flask-приложение Hello World.
+- №5 — веб-страница с использованием Bootstrap.
+- №7 — FastAPI endpoint, возвращающий JSON.
 
+### Задания повышенной сложности
 
+- №6 — многопользовательский чат с использованием WebSocket и FastAPI.
+- №8 — использование Pydantic-схем для проверки и обработки данных.
 
-\### Задания средней сложности
+## Структура проекта
 
+- `task_medium_1.py` — Flask Hello World.
+- `task_medium_5.py` — Flask-приложение с Bootstrap.
+- `task_medium_7.py` — FastAPI JSON endpoint.
+- `task_hard_6.py` — WebSocket-чат.
+- `task_hard_8.py` — API с Pydantic-схемами.
+- `templates/` — HTML-шаблоны.
+- `tests/` — автоматические тесты.
 
-
-\- №1 — Flask-приложение Hello World.
-
-\- №5 — веб-страница с использованием Bootstrap.
-
-\- №7 — FastAPI endpoint, возвращающий JSON.
-
-
-
-\### Задания повышенной сложности
-
-
-
-\- №6 — многопользовательский чат с использованием WebSocket и FastAPI.
-
-\- №8 — использование Pydantic-схем для проверки и обработки данных.
-
-
-
-\## Структура проекта
-
-
-
-\- `task\_medium\_1.py` — Flask Hello World.
-
-\- `task\_medium\_5.py` — Flask-приложение с Bootstrap.
-
-\- `task\_medium\_7.py` — FastAPI JSON endpoint.
-
-\- `task\_hard\_6.py` — WebSocket-чат.
-
-\- `task\_hard\_8.py` — API с Pydantic-схемами.
-
-\- `templates/` — HTML-шаблоны.
-
-\- `tests/` — автоматические тесты.
-
-
-
-\## Установка зависимостей
-
-
+## Установка зависимостей
 
 ```bash
-
 python -m pip install -r requirements.txt
-
 ```
 
-
-
-\## Запуск приложений
-
-
+## Запуск приложений
 
 Flask Hello World:
 
-
-
 ```bash
-
-python task\_medium\_1.py
-
+python task_medium_1.py
 ```
-
-
 
 Bootstrap:
 
-
-
 ```bash
-
-python task\_medium\_5.py
-
+python task_medium_5.py
 ```
-
-
 
 FastAPI JSON:
 
-
-
 ```bash
-
-python -m uvicorn task\_medium\_7:app --reload --port 8000
-
+python -m uvicorn task_medium_7:app --reload --port 8000
 ```
-
-
 
 WebSocket-чат:
 
-
-
 ```bash
-
-python -m uvicorn task\_hard\_6:app --reload --port 8001
-
+python -m uvicorn task_hard_6:app --reload --port 8001
 ```
-
-
 
 Pydantic API:
 
-
-
 ```bash
-
-python -m uvicorn task\_hard\_8:app --reload --port 8002
-
+python -m uvicorn task_hard_8:app --reload --port 8002
 ```
 
-
-
-\## Проверка проекта
-
-
+## Проверка проекта
 
 Компиляция:
 
-
-
 ```bash
-
-python -m py\_compile task\_medium\_1.py task\_medium\_5.py task\_medium\_7.py task\_hard\_6.py task\_hard\_8.py
-
+python -m py_compile task_medium_1.py task_medium_5.py task_medium_7.py task_hard_6.py task_hard_8.py
 ```
-
-
 
 Проверка PEP 8:
 
-
-
 ```bash
-
-python -m flake8 . --exclude=.git,\_\_pycache\_\_,.venv,venv
-
+python -m flake8 . --exclude=.git,__pycache__,.venv,venv
 ```
-
-
 
 Автоматические тесты:
 
-
-
 ```bash
-
-python -m unittest discover -s tests -p "test\_\*.py" -v
-
+python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-
-
-\## Примечание
-
-
+## Примечание
 
 Для WebSocket-чата используется браузерный интерфейс. Данные студентов в Pydantic-приложении хранятся в оперативной памяти и сбрасываются после перезапуска сервера.
-
